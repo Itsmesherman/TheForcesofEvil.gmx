@@ -50,15 +50,7 @@ varMergeable = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (varMergeable = true)
-{
-     if (place_meeting(1, 1, Undead_1_Object))
-    {
-        instance_destroy()
-         with(Undead_1_Object) instance_destroy();
-        instance_create(x, y, Undead_2_Object)
-     }
-}
+            <string>varMergeable = false
 </string>
           </argument>
         </arguments>
@@ -107,6 +99,35 @@ varMergeable = false;
     x=mouse_x
     y=mouse_y
     }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (varMergeable = true)
+{
+     if (place_meeting(32, 32, Undead_1_Object))
+    {
+        instance_destroy()
+         with(Undead_1_Object) instance_destroy();
+        instance_create(x, y, Undead_2_Object)
+     }
+}
 </string>
           </argument>
         </arguments>
@@ -209,27 +230,6 @@ global.CanSelect = true
           <argument>
             <kind>4</kind>
             <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>varMergeable = false
-</string>
           </argument>
         </arguments>
       </action>
