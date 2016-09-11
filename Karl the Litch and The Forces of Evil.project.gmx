@@ -32,6 +32,7 @@
     <object>objects\Undead_1_Object</object>
     <object>objects\Undead_2_Object</object>
     <object>objects\oGame</object>
+    <object>objects\oOne</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
