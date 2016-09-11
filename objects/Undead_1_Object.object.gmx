@@ -121,7 +121,7 @@ varMergeable = false;
             <kind>1</kind>
             <string>if (varMergeable = true)
 {
-     if (place_meeting(32, 32, Undead_1_Object))
+     if (place_meeting(x, y, Undead_1_Object))
     {
         instance_destroy()
          with(Undead_1_Object) instance_destroy();
