@@ -58,7 +58,6 @@
     <instance objName="Undead_1_Object" x="672" y="2016" name="inst_D1F80FE6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="object6" x="-64" y="1760" name="inst_6AE8456F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Money_Window_Object" x="448" y="2272" name="inst_8BD4E1C0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oGame" x="-32" y="-32" name="inst_BE81D86E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

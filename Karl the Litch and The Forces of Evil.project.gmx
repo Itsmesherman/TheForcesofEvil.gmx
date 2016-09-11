@@ -15,7 +15,6 @@
     <sprite>sprites\sprite6</sprite>
     <sprite>sprites\Undead1_Sprite</sprite>
     <sprite>sprites\Undead2_Sprite</sprite>
-    <sprite>sprites\sGame</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -31,7 +30,6 @@
     <object>objects\object6</object>
     <object>objects\Undead_1_Object</object>
     <object>objects\Undead_2_Object</object>
-    <object>objects\oGame</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
