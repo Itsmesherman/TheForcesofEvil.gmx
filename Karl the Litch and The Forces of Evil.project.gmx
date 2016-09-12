@@ -16,6 +16,11 @@
     <sprite>sprites\Undead1_Sprite</sprite>
     <sprite>sprites\Undead2_Sprite</sprite>
     <sprite>sprites\sGame</sprite>
+    <sprites name="Blocks">
+      <sprite>sprites\sOne</sprite>
+      <sprite>sprites\sTwo</sprite>
+      <sprite>sprites\sThree</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -32,10 +37,16 @@
     <object>objects\Undead_1_Object</object>
     <object>objects\Undead_2_Object</object>
     <object>objects\oGame</object>
-    <object>objects\oOne</object>
+    <objects name="Blocks">
+      <object>objects\oOne</object>
+      <object>objects\oTwo</object>
+      <object>objects\oThree</object>
+      <object>objects\oDragParent</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
+    <room>rooms\rDragAndDrop</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
