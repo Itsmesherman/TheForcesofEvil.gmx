@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>1</depth>
+  <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,12 +25,43 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>grab = false;
-global.canGrab = true;
-depth = 1;
+            <string>///Set variables
 
+//toggle for whether the obj is grabbed by mouse
+grab = false;
+
+//gets checked while colliding
+canMerge = false;
+
+depth = 0;
+
+//used to calculate object off set relative to mouse position while being grabbed
 xx = 0;
 yy = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///disable canMerge
+canMerge = false;
 </string>
           </argument>
         </arguments>
@@ -53,9 +84,10 @@ yy = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (grab == false)
+            <string>///if grabbed move to mouse pos w/ offset
+if (grab == false)
 {
-    exit;
+    depth = 0;
 }
 else
 {
@@ -84,11 +116,35 @@ else
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>grab = false;
-global.canGrab = true;
-depth = 0
+            <string>///release
 
+grab = false;
+global.canGrab = true;
 </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>301</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_set_alarm</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>2</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>
@@ -110,11 +166,14 @@ depth = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if global.canGrab = true
+            <string>///grab
+
+if global.canGrab = true
 {
     grab = true;
     global.canGrab = false;
-    depth = -1
+    depth = -1;
+    canMerge = true;
 }
 
 //get relative click pos
