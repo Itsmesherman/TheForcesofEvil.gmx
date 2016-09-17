@@ -24,18 +24,17 @@
       <sprite>sprites\sFive</sprite>
       <sprite>sprites\sSix</sprite>
     </sprites>
+    <sprite>sprites\sprite16</sprite>
+    <sprite>sprites\sMenuExit</sprite>
+    <sprite>sprites\sNecAchievment</sprite>
+    <sprite>sprites\sNecAchievment1</sprite>
+    <sprite>sprites\sAchievementLocked</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
-    <object>objects\Mission_Button</object>
-    <object>objects\Unit_Button</object>
-    <object>objects\Build_Button</object>
-    <object>objects\Menue_Button</object>
-    <object>objects\Money_Window_Object</object>
-    <object>objects\Coartyard_Object</object>
     <object>objects\object6</object>
     <object>objects\Undead_1_Object</object>
     <object>objects\Undead_2_Object</object>
@@ -51,10 +50,30 @@
     <objects name="Managers">
       <object>objects\oGame</object>
     </objects>
+    <objects name="Menu Items">
+      <objects name="Buttons">
+        <objects name="Main Screen Buttons">
+          <object>objects\oBuild_Button</object>
+          <object>objects\oUnit_Button</object>
+          <object>objects\oMenu_Button</object>
+          <object>objects\oMission_Button</object>
+        </objects>
+        <objects name="Necronomicon buttons">
+          <object>objects\oMenuExit</object>
+          <object>objects\oNecAchievment</object>
+          <object>objects\oNecAchievment_1</object>
+        </objects>
+      </objects>
+      <objects name="Dead Objects">
+        <object>objects\oMenuBackround</object>
+        <object>objects\oMoney_Window_Object</object>
+      </objects>
+      <object>objects\oMenuManager</object>
+    </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rDragAndDrop</room>
     <room>rooms\room0</room>
+    <room>rooms\rDragAndDrop</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
