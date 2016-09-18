@@ -24,11 +24,20 @@
       <sprite>sprites\sFive</sprite>
       <sprite>sprites\sSix</sprite>
     </sprites>
-    <sprite>sprites\sprite16</sprite>
+    <sprite>sprites\Necronomicon_Backround</sprite>
     <sprite>sprites\sMenuExit</sprite>
     <sprite>sprites\sNecAchievment</sprite>
     <sprite>sprites\sNecAchievment1</sprite>
     <sprite>sprites\sAchievementLocked</sprite>
+    <sprites name="sSkellys">
+      <sprite>sprites\sSOne</sprite>
+      <sprite>sprites\sSTwo</sprite>
+      <sprite>sprites\sSThree</sprite>
+      <sprite>sprites\sSFour</sprite>
+      <sprite>sprites\sSFive</sprite>
+      <sprite>sprites\sSSix</sprite>
+    </sprites>
+    <sprite>sprites\sPopUp</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -64,6 +73,8 @@
         </objects>
         <objects name="Necronomicon buttons">
           <object>objects\oMenuExit</object>
+          <object>objects\oEvilAddedOk</object>
+          <object>objects\object22</object>
           <object>objects\oNecAchievment</object>
           <object>objects\oNecAchievment_1</object>
         </objects>
