@@ -57,7 +57,7 @@
     <instance objName="oGame" x="-32" y="-32" name="inst_09670BFC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oMenuManager" x="-96" y="2368" name="inst_B18EDF02" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="object6" x="-672" y="3392" name="inst_30DCFA88" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="object6" x="-1024" y="3008" name="inst_4775D037" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="object6" x="-1632" y="5856" name="inst_4775D037" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

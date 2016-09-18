@@ -63,7 +63,9 @@ if global.canGrab = true
     {
         if canMerge = true
         {
+            global.FiveExists -= 2
             instance_create(x, y, oSix)
+            global.SixExists += 1
             instance_destroy()
             with(other) 
             {
