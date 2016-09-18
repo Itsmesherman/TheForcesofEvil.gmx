@@ -242,7 +242,13 @@ instance_create(xx, yy, oSix)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Test
+            <string>///Evil Adding
+global.Evil += (.05*((global.OneExists)+ 1));
+global.Evil += (.13*((global.TwoExists)+ 1));
+global.Evil += (.32*((global.ThreeExists)+ 1));
+global.Evil += (.80*((global.FourExists)+ 1));
+global.Evil += (2.00*((global.FiveExists)+ 1));
+global.Evil += (5.00*((global.SixExists)+ 1));
 </string>
           </argument>
         </arguments>
@@ -355,6 +361,49 @@ exit;
         </arguments>
       </action>
     </event>
+    <event eventtype="9" enumb="113">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// EraseSaveGame
+
+//This line checks for the ini exsisting, and deletes it if it does exsist
+if (file_exists("Save.sav")) 
+{
+file_delete("Save.sav")
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>331</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_restart_game</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+    </event>
     <event eventtype="9" enumb="54">
       <action>
         <libid>1</libid>
@@ -375,6 +424,7 @@ exit;
             <string>///create obj oSix @ mouse pos
 
 instance_create(mouse_x, mouse_y, oSix)
+(global.SixExists) += 1
 </string>
           </argument>
         </arguments>
@@ -400,6 +450,7 @@ instance_create(mouse_x, mouse_y, oSix)
             <string>///create obj oFive @ mouse pos
 
 instance_create(mouse_x, mouse_y, oFive)
+(global.FiveExists) += 1
 </string>
           </argument>
         </arguments>
@@ -425,6 +476,7 @@ instance_create(mouse_x, mouse_y, oFive)
             <string>///create obj oFour @ mouse pos
 
 instance_create(mouse_x, mouse_y, oFour)
+(global.FourExists) += 1
 </string>
           </argument>
         </arguments>
@@ -450,6 +502,7 @@ instance_create(mouse_x, mouse_y, oFour)
             <string>///create obj oThree @ mouse pos
 
 instance_create(mouse_x, mouse_y, oThree)
+(global.ThreeExists) += 1
 </string>
           </argument>
         </arguments>
@@ -475,6 +528,7 @@ instance_create(mouse_x, mouse_y, oThree)
             <string>///create obj oTwo @ mouse pos
 
 instance_create(mouse_x, mouse_y, oTwo)
+(global.TwoExists) += 1
 </string>
           </argument>
         </arguments>
@@ -500,6 +554,7 @@ instance_create(mouse_x, mouse_y, oTwo)
             <string>///create obj oOne @ mouse pos
 
 instance_create(mouse_x, mouse_y, oOne)
+(global.OneExists) += 1
 </string>
           </argument>
         </arguments>
