@@ -34,6 +34,10 @@
     <background>background\background0</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\ScrSaveGame.gml</script>
+    <script>scripts\ScrLoadGame.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\object6</object>
     <object>objects\Undead_1_Object</object>
