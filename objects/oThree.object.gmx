@@ -63,7 +63,9 @@ if global.canGrab = true
     {
         if canMerge = true
         {
+            global.ThreeExists -= 2
             instance_create(x, y, oFour)
+            global.FourExists += 1
             instance_destroy()
             with(other) 
             {

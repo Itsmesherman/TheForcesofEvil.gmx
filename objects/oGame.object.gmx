@@ -30,6 +30,15 @@
 //
 global.canGrab = true;
 global.Debug = 0;
+
+// This is all the oBlock global variables
+global.OneExists = -1
+global.TwoExists = -1
+global.ThreeExists = -1
+global.FourExists = -1
+global.FiveExists = -1
+global.SixExists = -1
+
 </string>
           </argument>
         </arguments>
@@ -142,6 +151,81 @@ global.Debug = 0;
       </action>
     </event>
     <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Spawn Box Objects
+
+// oOne
+if instance_number(oOne) &lt;= global.OneExists
+{
+xx = random_range(room_width / 3, room_width - room_width / 3)
+yy = random_range(room_width / 4, room_width - room_width / 4)
+
+instance_create(xx, yy, oOne)
+}
+
+// oTwo
+if instance_number(oTwo) &lt;= global.TwoExists
+{
+xx = random_range(room_width / 3, room_width - room_width / 3)
+yy = random_range(room_width / 4, room_width - room_width / 4)
+
+instance_create(xx, yy, oTwo)
+}
+
+// oThree
+if instance_number(oThree) &lt;= global.ThreeExists
+{
+xx = random_range(room_width / 3, room_width - room_width / 3)
+yy = random_range(room_width / 4, room_width - room_width / 4)
+
+instance_create(xx, yy, oThree)
+}
+
+// oFour
+if instance_number(oFour) &lt;= global.FourExists
+{
+xx = random_range(room_width / 3, room_width - room_width / 3)
+yy = random_range(room_width / 4, room_width - room_width / 4)
+
+instance_create(xx, yy, oFour)
+}
+
+// oFive
+if instance_number(oFive) &lt;= global.FiveExists
+{
+xx = random_range(room_width / 3, room_width - room_width / 3)
+yy = random_range(room_width / 4, room_width - room_width / 4)
+
+instance_create(xx, yy, oFive)
+}
+
+// oSix
+if instance_number(oSix) &lt;= global.SixExists
+{
+xx = random_range(room_width / 3, room_width - room_width / 3)
+yy = random_range(room_width / 4, room_width - room_width / 4)
+
+instance_create(xx, yy, oSix)
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
       <action>
         <libid>1</libid>
         <id>603</id>
