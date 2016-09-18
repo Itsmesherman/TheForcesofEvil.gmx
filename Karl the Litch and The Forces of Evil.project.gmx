@@ -72,8 +72,8 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
     <room>rooms\rDragAndDrop</room>
+    <room>rooms\room0</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
