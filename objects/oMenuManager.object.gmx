@@ -186,8 +186,64 @@ if global.Menu = 2
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>{
+if global.FreshGame = false
+    if global.mEvillAddedOk = 0
+        {
+        draw_sprite_stretched(sPopUp,0,(room_width / 4.25),(room_width / 3.25),(room_width / 2),(room_width / 6))
+        draw_text_transformed(room_width / 4,room_width / 3, "Welcome Back! #Your Army has amassed #" + string(global.EvilAdded) + " #Since you were away!",3,3,0)
+       
+        }
+}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>other</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Draw Evil
+
+draw_set_colour(c_purple)
+{depth = -10
+draw_text_transformed(480,2350, "Evil: " + string(global.Evil),5,5,0) 
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -250,10 +306,38 @@ if global.FreshGame = false
         draw_text_transformed(0,750, "SPBS: " + string(global.SecondsPassed),5,5,0)
         //
         draw_text_transformed(0,850, "Evil Added: " + string(global.EvilAdded),5,5,0)
+        draw_text_transformed(0,950, "Evil Added: " + string(global.VKon),5,5,0)
     }
 }
 
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Draw Virtual Keys
+if global.VKon = true
+{
+instance_create(((room_width / 2)-128),((room_width / 2)+0),oVK_F1)
+instance_create(((room_width / 2)+0),((room_width / 2)+0),oVK_F2)
+instance_create(((room_width / 2)+128),((room_width / 2)+0),oVK_F3)
+}
 </string>
           </argument>
         </arguments>

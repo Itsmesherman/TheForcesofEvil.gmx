@@ -33,6 +33,8 @@ global.Debug = 0;
 global.EvilAdded = 0
 global.mEvillAddedOk = 0
 global.FreshGame = true
+global.Evil = 100
+global.VKon = false
 
 // This is all the oBlock global variables
 global.OneExists = -1
@@ -127,8 +129,38 @@ global.SixExists = -1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (file_exists("Save.sav"))
+            <string>/// Set the FreshGame
+if (file_exists("Save.sav"))
 global.FreshGame = false
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Pinch and Zoom Great
+
+//These variables will hold the starting width/height of the view, 
+//the current scaling modifier, and the distance between the two touches on the screen.
+initial_w = view_wview[0];
+ initial_h = view_hview[0];
+ v_scale = 1;
+ v_dist = 0;
+ 
 </string>
           </argument>
         </arguments>
@@ -279,6 +311,79 @@ global.Evil += (5.00*((global.SixExists)+ 1));
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Pinch and zoom Step
+
+//
+var mx0raw, my0raw, mx1raw, my1raw;
+ mx0raw = device_mouse_raw_x(0);
+ my0raw = device_mouse_raw_y(0);
+ mx1raw = device_mouse_raw_x(1);
+ my1raw = device_mouse_raw_y(1);
+ 
+ //
+ 
+ if device_mouse_check_button(1, mb_left)
+    {
+    if device_mouse_check_button_pressed(1, mb_left)
+       {
+       v_dist = point_distance(mx0raw, my0raw, mx1raw ,my1raw) * v_scale;
+       }
+    v_scale = v_dist / max(1, point_distance(mx0raw, my0raw, mx1raw, my1raw));
+    if v_scale &lt; 0.5 v_scale = 0.5 else if v_scale &gt; 1.5 v_scale = 1.5;
+    view_wview[0] = initial_w * v_scale;
+    view_hview[0] = initial_h * v_scale;
+   
+    }
+ 
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Evil Added Aceppt Prompt
+{
+if global.FreshGame = false
+    if global.mEvillAddedOk = 0
+        {
+        instance_create(room_width / 2,room_width / 2, oEvilAddedOk)
+        }
+}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="5" enumb="112">
       <action>
@@ -310,6 +415,75 @@ global.Evil += (5.00*((global.SixExists)+ 1));
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+      </action>
+    </event>
+    <event eventtype="6" enumb="51">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if global.VKon = true
+{global.VKon = false}
+
+if global.VKon = false
+{global.VKon = true}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="6" enumb="50">
+      <action>
+        <libid>1</libid>
+        <id>532</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_effect</functionname>
+        <codestring></codestring>
+        <whoName>other</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>4</kind>
+            <string>1</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>mouse_x</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>mouse_y</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>1</string>
+          </argument>
+          <argument>
+            <kind>13</kind>
+            <string>16777215</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>1</string>
+          </argument>
+        </arguments>
       </action>
     </event>
     <event eventtype="7" enumb="2">
