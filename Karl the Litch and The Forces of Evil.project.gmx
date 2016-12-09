@@ -3,7 +3,9 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <NewExtensions/>
+  <NewExtensions>
+    <extension index="0">extensions\Simple Pinch and Pan</extension>
+  </NewExtensions>
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\Mission_Sprite</sprite>
@@ -45,6 +47,7 @@
     </sprites>
     <sprite>sprites\sprite30</sprite>
     <sprite>sprites\sprite31</sprite>
+    <sprite>sprites\sp_mover</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -53,6 +56,8 @@
   <scripts name="scripts">
     <script>scripts\ScrSaveGame.gml</script>
     <script>scripts\ScrLoadGame.gml</script>
+    <script>scripts\simplePinch_updateView.gml</script>
+    <script>scripts\simplePinch_initializeView.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\Undead_1_Object</object>
@@ -88,6 +93,7 @@
       <objects name="Dead Objects">
         <object>objects\oMenuBackround</object>
         <object>objects\oMoney_Window_Object</object>
+        <object>objects\oCrosshair</object>
       </objects>
       <object>objects\oMenuManager</object>
       <objects name="Virtual Keys">
@@ -96,6 +102,9 @@
         <object>objects\oVK_F3</object>
       </objects>
     </objects>
+    <object>objects\ob_pinch_controller</object>
+    <object>objects\mover</object>
+    <object>objects\oPillageBox</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

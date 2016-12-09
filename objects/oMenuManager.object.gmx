@@ -8,142 +8,6 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="0" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>201</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_create_object</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>10</kind>
-            <object>oMission_Button</object>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>1120</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>2240</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>201</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_create_object</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>10</kind>
-            <object>oBuild_Button</object>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>201</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_create_object</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>10</kind>
-            <object>oMenu_Button</object>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>1120</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>global.Menu = 0
-global.cMenu = 0
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>201</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_create_object</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>10</kind>
-            <object>oUnit_Button</object>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>2240</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -218,6 +82,47 @@ if global.FreshGame = false
       </action>
     </event>
     <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Draw Main 4 buttons
+//Unit Button
+if instance_exists(oUnit_Button) = false
+{
+instance_create((view_xview[0] + 32), (view_yview[0] + 2560 - 264 -32),oUnit_Button)
+}
+//Build Button
+if instance_exists(oBuild_Button) = false
+{
+instance_create((view_xview[0] + 32), (view_yview[0] + 32),oBuild_Button)
+}
+//Menu Button
+if instance_exists(oMenu_Button) = false
+{
+instance_create((view_xview[0] + 1440 -256 - 32), (view_yview[0] + 32),oMenu_Button)
+}
+//Mission Button
+if instance_exists(oMission_Button) = false
+{
+instance_create((view_xview[0] + 1440 - 256 - 32), (view_yview[0] + 2560 - 264 -32),oMission_Button)
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -306,7 +211,7 @@ if global.FreshGame = false
         draw_text_transformed(0,750, "SPBS: " + string(global.SecondsPassed),5,5,0)
         //
         draw_text_transformed(0,850, "Evil Added: " + string(global.EvilAdded),5,5,0)
-        draw_text_transformed(0,950, "Evil Added: " + string(global.VKon),5,5,0)
+        draw_text_transformed(0,950, "Virtual Keys: " + string(global.VKon),5,5,0)
     }
 }
 
@@ -337,6 +242,17 @@ if global.VKon = true
 instance_create(((room_width / 2)-128),((room_width / 2)+0),oVK_F1)
 instance_create(((room_width / 2)+0),((room_width / 2)+0),oVK_F2)
 instance_create(((room_width / 2)+128),((room_width / 2)+0),oVK_F3)
+}
+else
+{
+with oVK_F1
+instance_destroy()
+
+with oVK_F2
+instance_destroy()
+
+with oVK_F3
+instance_destroy()
 }
 </string>
           </argument>
