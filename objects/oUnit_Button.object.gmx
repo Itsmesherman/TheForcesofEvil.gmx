@@ -25,7 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.OneExists += 1
+            <string>if global.Evil &gt;= 100
+{
+global.OneExists += 1
+global.Evil -= 100
+}
+else
+exit
 </string>
           </argument>
         </arguments>

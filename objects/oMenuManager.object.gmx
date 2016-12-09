@@ -186,8 +186,6 @@ if global.Menu = 2
           </argument>
         </arguments>
       </action>
-    </event>
-    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -204,15 +202,141 @@ if global.Menu = 2
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if global.Debug = 1
+            <string>{
+if global.FreshGame = false
+    if global.mEvillAddedOk = 0
+        {
+        draw_sprite_stretched(sPopUp,0,(room_width / 4.25),(room_width / 3.25),(room_width / 2),(room_width / 6))
+        draw_text_transformed(room_width / 4,room_width / 3, "Welcome Back! #Your Army has amassed #" + string(global.EvilAdded) + " #Since you were away!",3,3,0)
+       
+        }
+}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>other</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Draw Evil
+
+draw_set_colour(c_purple)
+{depth = -10
+draw_text_transformed(480,2350, "Evil: " + string(global.Evil),5,5,0) 
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Give Welcome Back and Add EvilAdded to Evil
 {
-draw_text_transformed(0,0, "Menu: " + string(global.Menu),5,5,0)
-draw_text_transformed(0,150, "OneExists: " + string(global.OneExists),5,5,0)
-draw_text_transformed(0,250, "TwoExists: " + string(global.TwoExists),5,5,0)
-draw_text_transformed(0,350, "ThreeExists: " + string(global.ThreeExists),5,5,0)
-draw_text_transformed(0,450, "FourExists: " + string(global.FourExists),5,5,0)
-draw_text_transformed(0,550, "FiveExists: " + string(global.FiveExists),5,5,0)
-draw_text_transformed(0,650, "SixExists: " + string(global.SixExists),5,5,0)
+if global.FreshGame = false
+    if global.mEvillAddedOk = 0
+        {
+        draw_sprite_stretched(sPopUp,0,(room_width / 4.25),(room_width / 3.25),(room_width / 2),(room_width / 6))
+        draw_text_transformed(room_width / 4,room_width / 3, "Welcome Back! #Your Army has amassed #" + string(global.EvilAdded) + " #Since you were away!",3,3,0)
+        instance_create(room_width / 2,room_width / 2, oEvilAddedOk)
+        }
+}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Debug Display
+{
+    if global.Debug = 1
+    {
+        draw_text_transformed(0,0, "Menu: " + string(global.Menu),5,5,0)
+        draw_text_transformed(0,150, "OneExists: " + string(global.OneExists),5,5,0)
+        draw_text_transformed(0,250, "TwoExists: " + string(global.TwoExists),5,5,0)
+        draw_text_transformed(0,350, "ThreeExists: " + string(global.ThreeExists),5,5,0)
+        draw_text_transformed(0,450, "FourExists: " + string(global.FourExists),5,5,0)
+        draw_text_transformed(0,550, "FiveExists: " + string(global.FiveExists),5,5,0)
+        draw_text_transformed(0,650, "SixExists: " + string(global.SixExists),5,5,0)
+        //Seconds Passed Between Sessions
+        draw_text_transformed(0,750, "SPBS: " + string(global.SecondsPassed),5,5,0)
+        //
+        draw_text_transformed(0,850, "Evil Added: " + string(global.EvilAdded),5,5,0)
+        draw_text_transformed(0,950, "Evil Added: " + string(global.VKon),5,5,0)
+    }
+}
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Draw Virtual Keys
+if global.VKon = true
+{
+instance_create(((room_width / 2)-128),((room_width / 2)+0),oVK_F1)
+instance_create(((room_width / 2)+0),((room_width / 2)+0),oVK_F2)
+instance_create(((room_width / 2)+128),((room_width / 2)+0),oVK_F3)
 }
 </string>
           </argument>

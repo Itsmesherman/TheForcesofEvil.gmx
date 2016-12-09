@@ -24,11 +24,27 @@
       <sprite>sprites\sFive</sprite>
       <sprite>sprites\sSix</sprite>
     </sprites>
-    <sprite>sprites\sprite16</sprite>
-    <sprite>sprites\sMenuExit</sprite>
-    <sprite>sprites\sNecAchievment</sprite>
-    <sprite>sprites\sNecAchievment1</sprite>
-    <sprite>sprites\sAchievementLocked</sprite>
+    <sprites name="sSkellys">
+      <sprite>sprites\sSOne</sprite>
+      <sprite>sprites\sSTwo</sprite>
+      <sprite>sprites\sSThree</sprite>
+      <sprite>sprites\sSFour</sprite>
+      <sprite>sprites\sSFive</sprite>
+      <sprite>sprites\sSSix</sprite>
+    </sprites>
+    <sprites name="Necronomicon Sprites">
+      <sprite>sprites\Necronomicon_Backround</sprite>
+      <sprite>sprites\sMenuExit</sprite>
+      <sprite>sprites\sNecAchievment1</sprite>
+      <sprite>sprites\sAchievementLocked</sprite>
+      <sprite>sprites\sPopUp</sprite>
+      <sprite>sprites\sNecAchievment</sprite>
+      <sprites name="virtual keys">
+        <sprite>sprites\sVK_F1</sprite>
+      </sprites>
+    </sprites>
+    <sprite>sprites\sprite30</sprite>
+    <sprite>sprites\sprite31</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -39,7 +55,6 @@
     <script>scripts\ScrLoadGame.gml</script>
   </scripts>
   <objects name="objects">
-    <object>objects\object6</object>
     <object>objects\Undead_1_Object</object>
     <object>objects\Undead_2_Object</object>
     <objects name="Blocks">
@@ -64,6 +79,8 @@
         </objects>
         <objects name="Necronomicon buttons">
           <object>objects\oMenuExit</object>
+          <object>objects\oEvilAddedOk</object>
+          <object>objects\object22</object>
           <object>objects\oNecAchievment</object>
           <object>objects\oNecAchievment_1</object>
         </objects>
@@ -73,6 +90,11 @@
         <object>objects\oMoney_Window_Object</object>
       </objects>
       <object>objects\oMenuManager</object>
+      <objects name="Virtual Keys">
+        <object>objects\oVK_F1</object>
+        <object>objects\oVK_F2</object>
+        <object>objects\oVK_F3</object>
+      </objects>
     </objects>
   </objects>
   <rooms name="rooms">
