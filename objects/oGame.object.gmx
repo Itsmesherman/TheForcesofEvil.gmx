@@ -37,7 +37,8 @@ global.mEvillAddedOk = 0
 global.FreshGame = true
 global.Evil = 100
 global.VKon = false
-
+global.Gold = 0
+global.SecondsPassed = 0
 // This is all the oBlock global variables
 global.OneExists = -1
 global.TwoExists = -1
@@ -46,7 +47,13 @@ global.FourExists = -1
 global.FiveExists = -1
 global.SixExists = -1
 
-
+// This sets all oBlock Loots globals
+global.OneLoots = 0
+global.TwoLoots = 0
+global.ThreeLoots = 0
+global.FourLoots = 0
+global.FiveLoots = 0
+global.SixLoots = 0
 </string>
           </argument>
         </arguments>
@@ -384,6 +391,33 @@ if global.FreshGame = false
         }
 }
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Gold Adding
+global.Gold += (.05*((global.OneLoots)));
+global.Gold += (.13*((global.TwoLoots)));
+global.Gold += (.32*((global.ThreeLoots)));
+global.Gold += (.80*((global.FourLoots)));
+global.Gold += (2.00*((global.FiveLoots)));
+global.Gold += (5.00*((global.SixLoots)));
 </string>
           </argument>
         </arguments>

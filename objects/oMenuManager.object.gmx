@@ -212,6 +212,7 @@ if global.FreshGame = false
         //
         draw_text_transformed(0,850, "Evil Added: " + string(global.EvilAdded),5,5,0)
         draw_text_transformed(0,950, "Virtual Keys: " + string(global.VKon),5,5,0)
+        draw_text_transformed(0,1050, "Gold: " + string(global.Gold),5,5,0)
     }
 }
 

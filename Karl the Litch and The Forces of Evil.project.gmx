@@ -48,6 +48,7 @@
     <sprite>sprites\sprite30</sprite>
     <sprite>sprites\sprite31</sprite>
     <sprite>sprites\sp_mover</sprite>
+    <sprite>sprites\sPillage</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>

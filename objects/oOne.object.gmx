@@ -8,6 +8,75 @@
   <parentName>oDragParent</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>move_towards_point( 700, 1700, 4 )
+             {
+                if instance_position(x &lt; -10, y &lt; 1800, self)
+                speed = 0
+             } 
+global.OneLoots -=1
+alarm[3]=90
+exit
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="oPillageBox">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if global.canGrab = true
+{
+    if grab = false
+    {
+        if canMerge = true
+        {
+           alarm[2] = 1800
+           move_towards_point( 700, 2700, 4 )
+             {
+                if instance_position(x &lt; -10, y &gt; 2700, self)
+                speed = 1
+             } 
+           global.OneLoots = + 1
+                
+        }
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="4" ename="oOne">
       <action>
         <libid>1</libid>
